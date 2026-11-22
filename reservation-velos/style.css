@@ -1,0 +1,136 @@
+:root {
+    --fond-carte-velos: #f1f1e7;
+    --border-carte-velos: 1px solid #335149;
+    --bg-btn-reserver: #13392d;
+    --color-btn-reserver: #fff;
+    --btn-disabled-reserver: #c1c1c1;
+    --btn-color-disabled: #000;
+    --btn-bg-hover: #20312c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+.contientVelo h1 {
+    text-align: center;
+}
+
+.contientVelo {
+    text-align: center;
+}
+
+.depart p {
+    text-align: center;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.veloCarte {
+    background-color: var(--fond-carte-velos);
+    border: var(--border-carte-velos);
+    padding: 10px;
+    max-width: fit-content;
+}
+
+.veloCarte img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.veloCarte .modele {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btnReserver {
+    background-color: var(--bg-btn-reserver);
+    color: var(--color-btn-reserver);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnReserver:hover {
+    background-color: var(--btn-bg-hover);
+    cursor: pointer;
+}
+
+.contenantVelos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contientInfos {
+    display: flex;
+    flex-direction: row;        /* Aligne les éléments horizontalement (côte à côte) */
+    justify-content: center;    /* Centre tout le groupe au milieu de la page */
+    align-items: center;        /* Aligne parfaitement le texte et l'encadré sur la même hauteur */
+    gap: 15px;                  /* Crée l'espace naturel entre la phrase et le badge */
+    margin-bottom: 25px;
+    width: 100%;                /* Prendre toute la largeur dispo pour ne plus écraser le contenu ! */
+}
+
+.contientInfos .texteStation {
+    font-size: 24px;            /* Écrit gros comme sur la maquette */
+    color: #1B4332;             /* Un beau vert foncé (ou var(--texte-principal)) */
+    margin: 0;                  /* Enlever les marges par défaut qui décalent tout */
+}
+
+.contientInfos .stationName {
+    font-weight: bold;          /* Met "Place Stanislas" en évidence */
+}
+
+.contientInfos .depart {
+    background-color: #f7f4eb;  /* Ton beige (ou var(--fond-carte-velos)) */
+    border: 1.5px solid #1B4332;/* Ta bordure verte (ou var(--border-carte-velos)) */
+    border-radius: 8px;         /* De jolis bords arrondis */
+    padding: 6px 16px;          /* Un peu d'air à l'intérieur (haut/bas gauche/droite) */
+}
+
+.contientInfos .depart p {
+    font-size: 16px;
+    font-weight: bold;          /* Écrit un peu plus épais */
+    color: #1B4332;
+    margin: 0;                  /* Enlever les marges par défaut du <p> pour éviter les décalages */
+}
+ 
+.disabled {
+    background-color: var(--btn-disabled-reserver);
+    color: var(--btn-color-disabled);
+    padding: 10px;
+    cursor: not-allowed;
+    border-radius: 5px;
+}
+
+/* classe utile pr js */
+
+.statutVelo {
+    background-color: #a1efae;
+    color: #1B4332;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.veloIndispo {
+    background-color: #b36868;
+    color: #653535;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contenuMsgReservation p {
+    color: green;
+    text-align: center;
+}
